@@ -1,2 +1,2 @@
-# GameAI Assignment 3
+# GameFundamental2Assignment2
 ### chanage to x86
