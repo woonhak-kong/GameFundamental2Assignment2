@@ -47,9 +47,10 @@ void PlayScene1::draw()
 
 	m_pTile->draw();
 	m_pConcrete->draw();
+	m_score->draw();
 	m_pPlayer->draw();
 
-	m_score->draw();
+
 	//m_testPlayer->draw();
 }
 
@@ -110,7 +111,7 @@ void PlayScene1::update()
 	{
 		if (CollisionManager::AABBCheck(m_pPlayer->getRealCollisionRect(),obstacle))
 		{
-			std::cout << "collision!!" << std::endl;
+			//std::cout << "collision!!" << std::endl;
 			m_pPlayer->collision(obstacle);
 		}
 	}

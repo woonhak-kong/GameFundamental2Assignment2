@@ -173,12 +173,13 @@ void Player::draw()
 
 		case CharacterState::DEAD:
 			TextureManager::Instance().playAnimation(getAnimation("dead"), getTransform().getPosition().x,
-				getTransform().getPosition().y, getWidth(), getHeight(), 0.5f, 0.0f, alpha, flip, false, [&](CallbackType type) -> void
+				getTransform().getPosition().y, getWidth(), getHeight(), 0.4f, 0.0f, alpha, flip, false, [&](CallbackType type) -> void
 				{
 					switch (type)
 					{
 						case CallbackType::ANIMATION_END:
 							//m_gameOver = true;
+							Game::Instance().changeSceneState(SceneState::END_SCENE);
 							break;
 						default:
 							break;
