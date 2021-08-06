@@ -215,6 +215,7 @@ void Player::hit()
 void Player::die()
 {
 	Character::die();
+	SoundManager::Instance().playSound("die");
 	Config::GAME_OVER = true;
 }
 
@@ -246,7 +247,12 @@ void Player::handleEvent()
 
 	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_SPACE))
 	{
+		if (!isJump())
+		{
+			SoundManager::Instance().playSound("jump");
+		}
 		jump();
+
 
 	}
 	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_P))

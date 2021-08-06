@@ -143,6 +143,11 @@ bool Character::isHit() const
 	return m_isHit;
 }
 
+bool Character::isJump() const
+{
+	return m_isJumping;
+}
+
 SDL_Rect Character::getAttackCollisionRect() const
 {
 	return m_attackCollisionRect;

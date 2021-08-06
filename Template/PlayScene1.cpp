@@ -164,11 +164,11 @@ bool PlayScene1::onEnter()
 {
 	Config::GAME_OVER = false;
 	SoundManager::Instance().load("assets/audio/rallyx_bgm.mp3", "bgm", SoundType::SOUND_MUSIC);
-	SoundManager::Instance().load("assets/audio/sword1.wav", "attack", SoundType::SOUND_SFX);
-	SoundManager::Instance().load("assets/audio/fire.wav", "fire", SoundType::SOUND_SFX);
+	SoundManager::Instance().load("assets/audio/jump.flac", "jump", SoundType::SOUND_SFX);
+	SoundManager::Instance().load("assets/audio/die.wav", "die", SoundType::SOUND_SFX);
 	SoundManager::Instance().load("assets/audio/enemy_explosion1.wav", SoundID::ENEMY_EXPLOSION, SoundType::SOUND_SFX);
-	SoundManager::Instance().setMusicVolume(1);
-	SoundManager::Instance().setSoundVolume(1);
+	SoundManager::Instance().setMusicVolume(10);
+	SoundManager::Instance().setSoundVolume(5);
 	// texture loading
 	/*StateParser stateParser;
 	stateParser.ParseState(Config::TEXTURE_LOCATION.c_str(), Config::PLAY_SCENE1);*/
@@ -197,7 +197,7 @@ bool PlayScene1::onEnter()
 
 	//setPlayer(player);
 
-	//SoundManager::Instance().playMusic("bgm");
+	SoundManager::Instance().playMusic("bgm");
 	return true;
 }
 

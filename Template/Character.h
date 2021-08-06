@@ -25,6 +25,7 @@ public:
 	bool isAttacking() const;
 	bool isDead() const;
 	bool isHit() const;
+	bool isJump() const;
 	SDL_Rect getAttackCollisionRect() const;
 	GameAI* getGameAI() const;
 	int getPresentHp() const;
