@@ -66,7 +66,11 @@ void GameSceneStateMachine::render()
 {
 	if (!m_gameStates.empty())
 	{
-		m_gameStates.back()->draw();
+		//m_gameScene.back()->Render();
+		for (auto& element : m_gameStates)
+		{
+			element->draw();
+		}
 	}
 }
 

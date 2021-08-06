@@ -9,6 +9,7 @@ enum class SceneState
 	PLAY_SCENE1,
 	END_SCENE,
 	CLEAR_SCENE,
+	PAUSE_SCENE,
 	NUM_OF_SCENES
 };
 #endif /* defined (__SCENE_STATE__) */

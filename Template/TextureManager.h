@@ -15,6 +15,7 @@
 #include "SpriteSheet.h"
 #include "Animation.h"
 #include "CallbackType.h"
+#include "Config.h"
 
 /* Singleton */
 class TextureManager
@@ -47,7 +48,7 @@ public:
 	// animation functions
 	void animateFrames(int frame_width, int frame_height, int frame_number, int row_number, float speed_factor, int& current_frame, int& current_row);
 	void playAnimation(const std::string& sprite_sheet_name, Animation& animation, int x, int y, float speed_factor, double angle, int alpha = 255, SDL_RendererFlip flip = SDL_FLIP_NONE);
-	void playAnimation(Animation& animation, int x, int y, int destW, int destH, float speed_factor, double angle, int alpha = 255, SDL_RendererFlip flip = SDL_FLIP_NONE, bool loop = true, std::function<void(CallbackType)> callback = nullptr, int callbackOrder = -1, bool center = false);
+	void playAnimation(Animation& animation, int x, int y, int destW, int destH, float speed_factor, double angle, int alpha = 255, SDL_RendererFlip flip = SDL_FLIP_NONE, bool loop = true, std::function<void(CallbackType)> callback = nullptr, int callbackOrder = -1, bool center = false, bool stopAnim = Config::GAME_OVER);
 	SpriteSheet* getSpriteSheet(const std::string& name);
 
 	// texture utility functions

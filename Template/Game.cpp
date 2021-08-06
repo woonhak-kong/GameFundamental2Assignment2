@@ -10,6 +10,7 @@
 #include "EventManager.h"
 #include "SceneState.h"
 #include "FontManager.h"
+#include "PauseScene.h"
 #include "PlayScene1.h"
 #include "SoundManager.h"
 #include "StartScene.h"
@@ -198,6 +199,10 @@ void Game::pushSceneState(SceneState newState)
 		case SceneState::CLEAR_SCENE:
 			m_sceneStateMachine->pushState(new ClearScene());
 			std::cout << "Clear scene activated" << std::endl;
+			break;
+		case SceneState::PAUSE_SCENE:
+			m_sceneStateMachine->pushState(new PauseScene());
+			std::cout << "PauseScene activated" << std::endl;
 			break;
 		default:
 			std::cout << "default case activated" << std::endl;

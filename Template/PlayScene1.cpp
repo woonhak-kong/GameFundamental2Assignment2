@@ -161,6 +161,7 @@ void PlayScene1::handleEvents()
 
 bool PlayScene1::onEnter()
 {
+	Config::GAME_OVER = false;
 	SoundManager::Instance().load("assets/audio/rallyx_bgm.mp3", "bgm", SoundType::SOUND_MUSIC);
 	SoundManager::Instance().load("assets/audio/sword1.wav", "attack", SoundType::SOUND_SFX);
 	SoundManager::Instance().load("assets/audio/fire.wav", "fire", SoundType::SOUND_SFX);

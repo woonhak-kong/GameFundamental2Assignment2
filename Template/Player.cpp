@@ -6,6 +6,7 @@
 #include "Camera.h"
 #include "Config.h"
 #include "EventManager.h"
+#include "Game.h"
 #include "MouseButtons.h"
 #include "RangeAttackBox.h"
 #include "Scene.h"
@@ -182,7 +183,7 @@ void Player::draw()
 						default:
 							break;
 					}
-				});
+				}, -1, false, false);
 			break;
 	}
 
@@ -213,6 +214,7 @@ void Player::hit()
 void Player::die()
 {
 	Character::die();
+	Config::GAME_OVER = true;
 }
 
 void Player::handleEvent()
@@ -246,8 +248,9 @@ void Player::handleEvent()
 		jump();
 
 	}
-	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_Q))
+	if (EventManager::Instance().isKeyDown(SDL_SCANCODE_P))
 	{
+		Game::Instance().pushSceneState(SceneState::PAUSE_SCENE);
 		//jump();
 		//if (!m_isQEPushed)
 		//{

@@ -347,7 +347,7 @@ void TextureManager::playAnimation(
 }
 
 void TextureManager::playAnimation(Animation& animation, int x, int y, int destW, int destH, float speed_factor, double angle, int alpha,
-	SDL_RendererFlip flip, bool loop /* = true */, std::function<void(CallbackType)> callback /* = nullptr */, int callbackOrder /* = -1*/, bool center /*=  false */)
+	SDL_RendererFlip flip, bool loop /* = true */, std::function<void(CallbackType)> callback /* = nullptr */, int callbackOrder /* = -1*/, bool center /*=  false */, bool stopAnim)
 {
 	const int totalFrames = animation.frames.size();
 	const int animationRate = round(totalFrames / 2 / speed_factor);
@@ -357,7 +357,10 @@ void TextureManager::playAnimation(Animation& animation, int x, int y, int destW
 	{
 		if (TheGame::Instance().getFrames() % animationRate == 0)
 		{
-			animation.current_frame++;
+			if (!stopAnim)
+			{
+				animation.current_frame++;
+			}
 
 			if(animation.current_frame == totalFrames - 1)
 			{

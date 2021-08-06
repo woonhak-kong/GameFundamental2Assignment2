@@ -21,6 +21,7 @@ public:
 	static const int LIVES = 5;
 	static const int GRAVITY = 5.0f;
 	inline static bool SHOWING_DEBUG = true;
+	inline static bool GAME_OVER = false;
 	inline static int mapWidth = 0;
 	inline static int mapHeight = 0;
 
