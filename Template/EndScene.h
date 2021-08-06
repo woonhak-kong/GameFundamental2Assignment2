@@ -3,7 +3,6 @@
 #define __END_SCENE__
 #include "Button.h"
 #include "Level.h"
-#include "Napkin.h"
 #include "Scene.h"
 class EndScene : public Scene
 {

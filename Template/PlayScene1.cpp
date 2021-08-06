@@ -1,10 +1,8 @@
 #include "PlayScene1.h"
 
-#include "AttackBox.h"
 #include "Background.h"
 #include "CollisionManager.h"
 #include "Config.h"
-#include "EnemyKnight.h"
 #include "LevelParser.h"
 #include "EventManager.h"
 #include "Game.h"
@@ -125,6 +123,7 @@ bool PlayScene1::onExit()
 {
 	Scene::removeAllChildren();
 	SoundManager::Instance().clear();
+	Config::TIME_SCORE = m_time;
 	return true;
 }
 
@@ -163,6 +162,7 @@ void PlayScene1::handleEvents()
 bool PlayScene1::onEnter()
 {
 	Config::GAME_OVER = false;
+	Config::TIME_SCORE = 0;
 	SoundManager::Instance().load("assets/audio/rallyx_bgm.mp3", "bgm", SoundType::SOUND_MUSIC);
 	SoundManager::Instance().load("assets/audio/jump.flac", "jump", SoundType::SOUND_SFX);
 	SoundManager::Instance().load("assets/audio/die.wav", "die", SoundType::SOUND_SFX);

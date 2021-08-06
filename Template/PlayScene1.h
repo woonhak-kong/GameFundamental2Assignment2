@@ -4,7 +4,6 @@
 #include "Background.h"
 #include "Concrete.h"
 #include "Level.h"
-#include "Napkin.h"
 #include "Node.h"
 #include "Obstacle.h"
 #include "Player.h"

@@ -6,14 +6,9 @@
 #include <iostream>
 #include <GLM/gtc/constants.hpp>
 
-#include "Boss1.h"
 #include "Config.h"
-#include "Door.h"
-#include "EnemyHuman1.h"
-#include "EnemyKnight.h"
 #include "EnemyType.h"
 #include "GameObjectFactory.h"
-#include "Napkin.h"
 #include "ObjectLayer.h"
 #include "Player.h"
 #include "TextureID.h"
@@ -187,31 +182,6 @@ void LevelParser::parseObjectLayer(TiXmlElement* pObjectElement, Scene* scene)
 
         	// Todo implemeting characters.
             LoaderParams loader = LoaderParams(x, y, widthOfTexture, heightOfTexture, realWidth, realHeight, maxHP, power, ID);
-            if (ID == "player")
-            {
-              /*  Player* player = new Player(loader);
-                scene->addChild(player, 4);
-                scene->setPlayer(player);*/
-            }
-            else if (ID == "EnemyType::EnemyKnight")
-            {
-                scene->addChild(new EnemyKnight(loader),1);
-            }
-            else if (ID == "zombie")
-            {
-                scene->addChild(new EnemyHuman1(loader),4 );
-            }
-            else if (ID == EnemyType::Boss1)
-            {
-                scene->addChild(new Boss1(loader), 1);
-            }
-            else if (ID == EnemyType::DOOR)
-            {
-                Door* door = new Door(loader);
-                scene->addChild(door, 1);
-                scene->setDoor(door);
-                door->setEnabled(false);
-            }
            // pGameObject->load(new LoaderParams(x, y, width, height, textureID, numFrames, callbackID, animSpeed));
            // pObjectLayer->getGameObjects()->push_back(pGameObject);
         }

@@ -2,7 +2,6 @@
 #ifndef __PLAYER__
 #define __PLAYER__
 #include "Character.h"
-#include "Weapon.h"
 
 class Player : public Character
 {
@@ -20,7 +19,6 @@ public:
 
 private:
 
-	Weapon* m_pWeapon;
 	bool m_isSPushed;
 
 };

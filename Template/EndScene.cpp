@@ -1,5 +1,7 @@
 #include "EndScene.h"
 
+#include <iomanip>
+
 #include "Button.h"
 #include "EventManager.h"
 #include "Game.h"
@@ -56,6 +58,11 @@ bool EndScene::onEnter()
 
 	Label* gameOver = new Label("Game Over", "lazy", 200, { 255,0,0,255 }, glm::vec2(Config::SCREEN_WIDTH / 2, 120.0f));
 	addChild(gameOver);
+
+	std::stringstream timeS;
+	timeS << std::fixed << std::setprecision(2) << Config::TIME_SCORE;
+	Label* time = new Label("Your Time is " + timeS.str() + " sec", "consolas", 50, {255,255,0,255}, glm::vec2(Config::SCREEN_WIDTH / 2, 220.0f), 0, true);
+	addChild(time);
 
 	m_pMenuButton = new Button("assets/UI/MenuButton.png", "menubutton", GameObjectType::MENU_BUTTON,
 		glm::vec2(Config::SCREEN_WIDTH / 2, Config::SCREEN_HEIGHT / 2), true);

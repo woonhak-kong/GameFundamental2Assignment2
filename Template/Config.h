@@ -22,6 +22,7 @@ public:
 	static const int GRAVITY = 5.0f;
 	inline static bool SHOWING_DEBUG = false;
 	inline static bool GAME_OVER = false;
+	inline static float TIME_SCORE = 0;
 	inline static int mapWidth = 0;
 	inline static int mapHeight = 0;
 

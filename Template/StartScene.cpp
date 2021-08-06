@@ -63,7 +63,7 @@ bool StartScene::onEnter()
 	stateParser.ParseState(Config::TEXTURE_LOCATION.c_str(), Config::START_SCENE);
 
 
-	Label* m_pSubLabel = new Label("GameAI Assignment 3", "Consolas", 80, blue, glm::vec2(100.0f, 40), 0, false);
+	Label* m_pSubLabel = new Label("GF Assignment 2", "Consolas", 80, blue, glm::vec2(100.0f, 40), 0, false);
 	m_pSubLabel->setParent(this);
 	addChild(m_pSubLabel);
 	Label* m_pNameLabel = new Label("Name : Woonhak, Kong", "Consolas", 80, blue, glm::vec2(100.0f, 120.0f), 0, false);

@@ -166,27 +166,22 @@ xcopy "$(ProjectDir)assets" "$(TargetDir)assets" /s /h /e /d /y /i</Command>
   <ItemGroup>
     <ClInclude Include="Agent.h" />
     <ClInclude Include="Animation.h" />
-    <ClInclude Include="AttackBox.h" />
     <ClInclude Include="Background.h" />
-    <ClInclude Include="Boss1.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="CallbackType.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="ClearScene.h" />
     <ClInclude Include="Concrete.h" />
-    <ClInclude Include="Door.h" />
     <ClInclude Include="EnemyHumanAI.h" />
     <ClInclude Include="EnergyBar.h" />
-    <ClInclude Include="Explosion.h" />
     <ClInclude Include="ExplosionType.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Obstacle.h" />
     <ClInclude Include="PauseScene.h" />
+    <ClInclude Include="PhysicsObject.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="RangeAttackBox.h" />
     <ClInclude Include="ScoreManager.h" />
     <ClInclude Include="SoundID.h" />
-    <ClInclude Include="Sword.h" />
     <ClInclude Include="SwordType.h" />
     <ClInclude Include="TextureID.h" />
     <ClInclude Include="Character.h" />
@@ -195,8 +190,6 @@ xcopy "$(ProjectDir)assets" "$(TargetDir)assets" /s /h /e /d /y /i</Command>
     <ClInclude Include="Config.h" />
     <ClInclude Include="DisplayObject.h" />
     <ClInclude Include="EndScene.h" />
-    <ClInclude Include="EnemyHuman1.h" />
-    <ClInclude Include="EnemyKnight.h" />
     <ClInclude Include="EnemyType.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="EventManager.h" />
@@ -215,9 +208,7 @@ xcopy "$(ProjectDir)assets" "$(TargetDir)assets" /s /h /e /d /y /i</Command>
     <ClInclude Include="LevelParser.h" />
     <ClInclude Include="LoaderParams.h" />
     <ClInclude Include="MouseButtons.h" />
-    <ClInclude Include="Napkin.h" />
     <ClInclude Include="ObjectLayer.h" />
-    <ClInclude Include="PhysicsObject.h" />
     <ClInclude Include="PlayScene1.h" />
     <ClInclude Include="RigidBody.h" />
     <ClInclude Include="Scene.h" />
@@ -228,7 +219,6 @@ xcopy "$(ProjectDir)assets" "$(TargetDir)assets" /s /h /e /d /y /i</Command>
     <ClInclude Include="SpriteSheet.h" />
     <ClInclude Include="StartScene.h" />
     <ClInclude Include="StateParser.h" />
-    <ClInclude Include="TestPlayer.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="TileLayer.h" />
@@ -237,14 +227,11 @@ xcopy "$(ProjectDir)assets" "$(TargetDir)assets" /s /h /e /d /y /i</Command>
     <ClInclude Include="Transform.h" />
     <ClInclude Include="UIControl.h" />
     <ClInclude Include="Util.h" />
-    <ClInclude Include="Weapon.h" />
     <ClInclude Include="WeaponType.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Agent.cpp" />
-    <ClCompile Include="AttackBox.cpp" />
     <ClCompile Include="Background.cpp" />
-    <ClCompile Include="Boss1.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Character.cpp" />
@@ -252,14 +239,10 @@ xcopy "$(ProjectDir)assets" "$(TargetDir)assets" /s /h /e /d /y /i</Command>
     <ClCompile Include="CollisionManager.cpp" />
     <ClCompile Include="Concrete.cpp" />
     <ClCompile Include="DisplayObject.cpp" />
-    <ClCompile Include="Door.cpp" />
     <ClCompile Include="EndScene.cpp" />
-    <ClCompile Include="EnemyHuman1.cpp" />
     <ClCompile Include="EnemyHumanAI.cpp" />
-    <ClCompile Include="EnemyKnight.cpp" />
     <ClCompile Include="EnergyBar.cpp" />
     <ClCompile Include="EventManager.cpp" />
-    <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="FontManager.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -270,7 +253,6 @@ xcopy "$(ProjectDir)assets" "$(TargetDir)assets" /s /h /e /d /y /i</Command>
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="LevelParser.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Napkin.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="ObjectLayer.cpp" />
     <ClCompile Include="Obstacle.cpp" />
@@ -278,7 +260,6 @@ xcopy "$(ProjectDir)assets" "$(TargetDir)assets" /s /h /e /d /y /i</Command>
     <ClCompile Include="PhysicsObject.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayScene1.cpp" />
-    <ClCompile Include="RangeAttackBox.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="ScoreManager.cpp" />
     <ClCompile Include="SoundManager.cpp" />
@@ -286,8 +267,6 @@ xcopy "$(ProjectDir)assets" "$(TargetDir)assets" /s /h /e /d /y /i</Command>
     <ClCompile Include="SpriteSheet.cpp" />
     <ClCompile Include="StartScene.cpp" />
     <ClCompile Include="StateParser.cpp" />
-    <ClCompile Include="Sword.cpp" />
-    <ClCompile Include="TestPlayer.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="TileLayer.cpp" />
@@ -297,7 +276,6 @@ xcopy "$(ProjectDir)assets" "$(TargetDir)assets" /s /h /e /d /y /i</Command>
     <ClCompile Include="tinyxmlparser.cpp" />
     <ClCompile Include="UIControl.cpp" />
     <ClCompile Include="Util.cpp" />
-    <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

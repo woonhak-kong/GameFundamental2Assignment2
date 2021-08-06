@@ -2,13 +2,11 @@
 
 #include <iostream>
 
-#include "AttackBox.h"
 #include "Camera.h"
 #include "Config.h"
 #include "EventManager.h"
 #include "Game.h"
 #include "MouseButtons.h"
-#include "RangeAttackBox.h"
 #include "Scene.h"
 #include "SoundManager.h"
 #include "TextureManager.h"
@@ -16,7 +14,6 @@
 
 Player::Player() :
 	Character(LoaderParams(200,200,100,100,50,100,10,10,"")),
-	m_pWeapon(nullptr),
 	m_isSPushed(false)
 {
 
@@ -200,7 +197,7 @@ void Player::update()
 
 void Player::clean()
 {
-	delete m_pWeapon;
+
 }
 
 void Player::collision(DisplayObject* obj)

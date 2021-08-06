@@ -7,8 +7,6 @@
 #include "SDL.h"
 
 #include "Level.h"
-#include "Napkin.h"
-#include "TestPlayer.h"
 
 
 class StartScene final : public Scene

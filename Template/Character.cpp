@@ -6,7 +6,6 @@
 #include "Game.h"
 #include "TextureManager.h"
 #include "algorithm"
-#include "AttackBox.h"
 
 Character::Character(const LoaderParams& loader) :
 	m_isJumping(false),
@@ -475,5 +474,4 @@ void Character::die()
 
 void Character::makingAttackCollisionBox(SwordType type /* = SwordType::NONE */)
 {
-	getParent()->addChildDuringUpdating(new AttackBox(m_attackCollisionRect, glm::vec2(m_isFlip ? getAttackSpeed() * -10 : getAttackSpeed() * 10, 0), m_attackReach, m_attackType, m_attackPower, m_isFlip ? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE, type));
 }
