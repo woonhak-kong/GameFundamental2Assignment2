@@ -167,8 +167,8 @@ bool PlayScene1::onEnter()
 	SoundManager::Instance().load("assets/audio/jump.flac", "jump", SoundType::SOUND_SFX);
 	SoundManager::Instance().load("assets/audio/die.wav", "die", SoundType::SOUND_SFX);
 	SoundManager::Instance().load("assets/audio/enemy_explosion1.wav", SoundID::ENEMY_EXPLOSION, SoundType::SOUND_SFX);
-	SoundManager::Instance().setMusicVolume(10);
-	SoundManager::Instance().setSoundVolume(5);
+	SoundManager::Instance().setMusicVolume(3);
+	SoundManager::Instance().setSoundVolume(30);
 	// texture loading
 	/*StateParser stateParser;
 	stateParser.ParseState(Config::TEXTURE_LOCATION.c_str(), Config::PLAY_SCENE1);*/

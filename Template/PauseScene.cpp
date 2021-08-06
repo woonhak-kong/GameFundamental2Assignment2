@@ -40,6 +40,7 @@ bool PauseScene::onExit()
 {
 	Scene::removeAllChildren();
 	Config::GAME_OVER = false;
+	SoundManager::Instance().resumeMusic();
 	return true;
 }
 
@@ -56,6 +57,8 @@ void PauseScene::handleEvents()
 
 bool PauseScene::onEnter()
 {
+	SoundManager::Instance().pauseMusic();
+
 	Config::GAME_OVER = true;
 
 	const SDL_Color blue = { 0, 255, 255, 255 };

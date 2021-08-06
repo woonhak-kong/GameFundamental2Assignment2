@@ -82,7 +82,7 @@ Obstacle::Obstacle(int num) :
 
 Obstacle::~Obstacle()
 {
-	std::cout << "destoryed " << m_num << std::endl;
+	std::cout << "Obstacle is destoryed " << m_num << std::endl;
 }
 
 void Obstacle::draw()
